@@ -10,6 +10,10 @@ import {
 
 import css from "./style.css";
 
+import ReTextField from "../../components/ReTextField"
+
+import { SignupSchema } from "../../helper/YupValidationSchema"
+
 export default class Login extends Component {
   render() {
     return (
@@ -17,17 +21,20 @@ export default class Login extends Component {
         <Card className="loginCard">
           <CardContent>
             <Typography color="textSecondary" gutterBottom className="typo">
-              Word of the Day
+              Login
             </Typography>
-            <Typography variant="h5" component="h2">
-              Hello
-            </Typography>
-            <Typography color="textSecondary">adjective</Typography>
-            <Typography component="p">Well well well</Typography>
+            <ReTextField
+              id="Username"
+              label="Username"
+              placeholder="Username"
+            />
+            <ReTextField
+              id="Password"
+              label="Password"
+              placeholder="Password"
+            />
           </CardContent>
-          <CardActions>
-            <Button size="small">Learn More</Button>
-          </CardActions>
+            <Button size="large">Login</Button>
         </Card>
       </div>
     );
